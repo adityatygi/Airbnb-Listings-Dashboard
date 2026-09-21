@@ -4,7 +4,9 @@
 
 This project presents an interactive **Power BI dashboard** that analyzes and compares Airbnb listings across **Chicago and New Orleans**.
 
-The dashboard focuses on **listing distribution, pricing, host behavior, property types, and neighborhood-level patterns** to transform raw Airbnb data into useful business insights.
+The dashboard focuses on **listing distribution, pricing, host behavior, property types, room types, reviews, and neighborhood-level patterns** to turn raw Airbnb data into meaningful insights.
+
+The project demonstrates practical skills in **data cleaning, data modeling, DAX, KPI analysis, and interactive data visualization using Power BI**.
 
 ---
 
@@ -15,6 +17,7 @@ The dashboard focuses on **listing distribution, pricing, host behavior, propert
 - Understand host and listing behavior
 - Identify neighborhood-level patterns
 - Analyze property and room-type distribution
+- Compare listing and pricing patterns
 - Create interactive KPIs and visualizations using Power BI
 - Present data in a clear and business-friendly format
 
@@ -22,7 +25,7 @@ The dashboard focuses on **listing distribution, pricing, host behavior, propert
 
 ## 📊 Dataset Overview
 
-The project analyzes **16,590 Airbnb listings** across the two cities.
+The analysis covers **16,590 Airbnb listings** across Chicago and New Orleans.
 
 | Metric | Value |
 |---|---:|
@@ -34,48 +37,97 @@ The project analyzes **16,590 Airbnb listings** across the two cities.
 
 ---
 
-## 📈 Dashboard Features
+# 📷 Dashboard Preview
 
-### 🔢 KPI Analysis
+## 🏠 Introduction
+
+The introduction page provides an overview of Airbnb and the purpose of the Chicago vs New Orleans analysis.
+
+![Airbnb Dashboard - Introduction](assets/airbnb-intro.png)
+
+---
+
+## 🌆 Chicago Dashboard
+
+The Chicago dashboard provides an interactive analysis of:
+
+- Listings
+- Pricing
+- Hosts
+- Property types
+- Room types
+- Neighborhoods
+- Reviews
+- Geographic distribution
+
+![Airbnb Chicago Dashboard](assets/airbnb-chicago.png)
+
+---
+
+## 🎺 New Orleans Dashboard
+
+The New Orleans dashboard provides an interactive analysis of:
+
+- Listings
+- Pricing
+- Hosts
+- Property types
+- Room types
+- Neighborhoods
+- Reviews
+- Geographic distribution
+
+![Airbnb New Orleans Dashboard](assets/airbnb-new-orleans.png)
+
+---
+
+# 📈 Dashboard Features
+
+## 🔢 KPI Analysis
 
 The dashboard includes key metrics such as:
 
 - Total Listings
-- Total Hosts
-- City-wise Listing Count
-- Listing Distribution
-- Host-level Metrics
-- Pricing Metrics
+- Location Total
+- Listings per Host
+- Unlicensed Host %
+- Price Range
+- Date Range
+- Listing distribution
+
+These KPIs provide a quick overview of the Airbnb market and allow users to explore the data using interactive filters.
 
 ---
 
-### 👤 Host Analysis
+## 👤 Host Analysis
 
 The dashboard analyzes host activity and listing ownership.
 
 Key analysis includes:
 
-- Number of unique hosts
-- Listings managed by hosts
-- Multi-property host analysis
+- Unique hosts
+- Listings per host
+- Top hosts by reviews
+- Multi-property host behavior
 - Host-level listing distribution
 
 Approximately **68% of hosts were identified as multi-property hosts** in the analysis.
 
 ---
 
-### 💰 Pricing Analysis
+## 💰 Pricing Analysis
 
-The dashboard compares pricing patterns between Chicago and New Orleans.
+The dashboard compares pricing patterns across Chicago and New Orleans.
 
 Analysis includes:
 
-- Median nightly price
+- Price variation by property type
 - City-wise price comparison
-- Property-type pricing
-- Price-range filtering
+- Neighborhood pricing
+- Price ranges
+- Price vs. review patterns
 
-The analysis identified a median nightly-price difference of approximately:
+The analysis identified a median nightly price of approximately:
 
 **Chicago: $138**
 
@@ -83,74 +135,134 @@ The analysis identified a median nightly-price difference of approximately:
 
 ---
 
-### 🏠 Property Analysis
+## 🏠 Property & Room Type Analysis
 
-The dashboard analyzes the distribution of different property types.
+The dashboard examines different property and room types.
 
-Key areas include:
+Analysis includes:
 
 - Entire homes/apartments
 - Private rooms
-- Other room types
-- Property-type distribution
+- Hotel rooms
+- Shared rooms
+- Other property types
+- Property-type pricing
+- Room-type distribution
 
 Approximately **81% of the analyzed market consisted of entire homes/apartments**.
 
 ---
 
-### 📍 Neighborhood Analysis
+## 📍 Neighborhood Analysis
 
-The dashboard provides neighborhood-level analysis to identify:
+The dashboard provides neighborhood-level analysis for both cities.
 
+It includes:
+
+- Popular neighborhoods
 - Listing concentration
-- Pricing patterns
-- High-listing neighborhoods
-- Differences between Chicago and New Orleans
+- Neighborhood pricing
+- Property distribution
+- Location-based patterns
+
+Interactive maps are also used to visualize the geographic distribution of Airbnb listings.
 
 ---
 
-## 🔍 Key Insights
+# 🔍 Key Insights
+
+Based on the project analysis:
 
 - The dataset contains **16,590 Airbnb listings** across Chicago and New Orleans.
-- Chicago contains **8,748 listings**, while New Orleans contains **7,842 listings**.
-- The analysis covers **144 neighborhoods** and **7,367 unique hosts**.
+- Chicago contains **8,748 listings**.
+- New Orleans contains **7,842 listings**.
+- The analysis covers **144 neighborhoods**.
+- There are **7,367 unique hosts**.
 - Approximately **19.6% of listings were identified as unlicensed**.
 - Approximately **68% of hosts were identified as multi-property hosts**.
-- Entire homes/apartments account for approximately **81% of the analyzed market**.
+- Entire homes/apartments represent approximately **81% of the analyzed market**.
 - The median nightly price was approximately **$138 in Chicago compared with $221 in New Orleans**.
 - Pricing and listing patterns vary across neighborhoods and property types.
 
 ---
 
-## 🧹 Data Preparation & Modeling
+# 🧹 Data Preparation
 
-The project involved preparing and modeling the raw Airbnb data before dashboard development.
+The raw Airbnb data was prepared before building the Power BI dashboard.
 
-Steps included:
+The data preparation process included:
 
 - Cleaning raw Excel/CSV data
-- Handling missing and inconsistent values
+- Handling missing values
+- Handling inconsistent values
 - Standardizing data fields
-- Combining data sources
-- Creating relationships between data tables
-- Building a structured Power BI data model
-- Creating calculated measures using DAX
-- Preparing data for interactive filtering and visualization
+- Removing unnecessary columns
+- Combining Chicago and New Orleans datasets
+- Preparing fields for analysis
+- Creating calculated measures
+- Preparing the data model for Power BI
 
 ---
 
-## 🛠️ Tools & Technologies
+# 🧩 Data Modeling
 
-- **Power BI** – Dashboard development and visualization
-- **DAX** – Calculated measures and KPI analysis
-- **Excel / CSV** – Data preparation and source data
-- **Data Modeling** – Relationships and analytical modeling
+The project uses **Power BI data modeling** to organize the Airbnb data for analysis.
+
+The model contains tables such as:
+
+- `Chicago_listings`
+- `New_Orleans_listings`
+- `Measure_Table`
+- `Calendar`
+- `TopN_Selector`
+
+Relationships between the data tables were created to support interactive analysis.
 
 ---
 
-## 📷 Dashboard Preview
+# 📊 DAX & KPI Analysis
 
-Add your dashboard screenshot here:
+**DAX (Data Analysis Expressions)** was used to create calculated measures and support dashboard analysis.
 
-```markdown
-![Airbnb Dashboard](assets/airbnb-dashboard.png)
+The calculations cover areas such as:
+
+- Listing counts
+- Host metrics
+- Pricing metrics
+- Listing-to-host ratios
+- Percentage calculations
+- KPI cards
+- Dynamic analysis
+
+Slicers and filters allow users to interact with the dashboard and explore different parts of the dataset.
+
+---
+
+# 🛠️ Tools & Technologies
+
+| Tool | Purpose |
+|---|---|
+| **Power BI** | Dashboard development and visualization |
+| **DAX** | Calculated measures and KPI analysis |
+| **Excel / CSV** | Data preparation and source data |
+| **Data Modeling** | Relationships and analytical modeling |
+
+---
+
+# 📂 Project Structure
+
+```text
+Airbnb-Listings-Dashboard/
+│
+├── assets/
+│   ├── airbnb-intro.png
+│   ├── airbnb-chicago.png
+│   └── airbnb-new-orleans.png
+│
+├── data/
+│   └── Airbnb_Data.csv
+│
+├── dashboard/
+│   └── Airbnb_Dashboard.pbix
+│
+└── README.md
